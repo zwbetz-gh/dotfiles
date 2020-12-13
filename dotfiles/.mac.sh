@@ -2,12 +2,6 @@
 # Imports
 ################################################################################
 source ${HOME}/.mac_chrome.sh
-source ${HOME}/.mac_dhs_password.sh
-source ${HOME}/.mac_dhs_piv.sh
-source ${HOME}/.mac_dhs_proxy.sh
-source ${HOME}/.mac_dhs_rfs.sh
-source ${HOME}/.mac_dhs_sonar.sh
-source ${HOME}/.mac_dhs_vpn.sh
 source ${HOME}/.mac_homebrew.sh
 source ${HOME}/.mac_java.sh
 source ${HOME}/.mac_nvm.sh
