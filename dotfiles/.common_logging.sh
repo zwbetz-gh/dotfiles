@@ -1,18 +1,23 @@
-log_message() {
-  local level=${1}
+bfl_log_message() {
+  local LEVEL=${1}
   shift
-  local message="${@}"
-  echo "[${0}] [${level}] [$(date +'%F %T')] ${message}"
+  local MESSAGE="${@}"
+  local TIMESTAMP=$(date +'%F %T')
+  echo -e "[${TIMESTAMP}] [${LEVEL}]\t${MESSAGE}"
 }
 
-log_info() {
+bfl_log_info() {
   log_message "INFO" "${@}"
 }
 
-log_warning() {
+bfl_log_warning() {
   log_message "WARNING" "${@}"
 }
 
-log_error() {
-  >&2 log_message "ERROR" "${@}"
+bfl_log_error() {
+  log_message "ERROR" "${@}"
 }
+
+# bfl_log_info info
+# bfl_log_warning warning
+# bfl_log_error error

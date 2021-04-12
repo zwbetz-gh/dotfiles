@@ -1,59 +1,59 @@
-path() {
+bfl_path() {
   echo ${PATH} | tr ':' '\n' | sort
 }
 
-lowercase() {
+bfl_lowercase() {
   local input="$([[ -p /dev/stdin ]] && cat - || echo "$@")"
   [[ -z "$input" ]] && return 1
   echo "$input" | tr '[:upper:]' '[:lower:]'
 }
 
-uppercase() {
+bfl_uppercase() {
   local input="$([[ -p /dev/stdin ]] && cat - || echo "$@")"
   [[ -z "$input" ]] && return 1
   echo "$input" | tr '[:lower:]' '[:upper:]'
 }
 
-length() {
+bfl_length() {
   local input="$([[ -p /dev/stdin ]] && cat - || echo "$@")"
   [[ -z "$input" ]] && return 1
   echo "${#input}"
 }
 
-count_bytes() {
+bfl_count_bytes() {
   wc -c < "$1" | tr -d ' '
 }
 
-count_chars() {
+bfl_count_chars() {
   wc -m < "$1" | tr -d ' '
 }
 
-count_words() {
+bfl_count_words() {
   wc -w < "$1" | tr -d ' '
 }
 
-count_lines() {
+bfl_count_lines() {
   wc -l < "$1" | tr -d ' '
 }
 
-math() {
+bfl_math() {
   local input="$([[ -p /dev/stdin ]] && cat - || echo "$@")"
   [[ -z "$input" ]] && return 1
   python -c "print("$input")"
 }
 
-search_file_by_name() {
+bfl_search_file_by_name() {
   find . -type f -name "*$@*"
 }
 
-search_file_by_name_ignore_case() {
+bfl_search_file_by_name_ignore_case() {
   find . -type f -iname "*$@*"
 }
 
-search_text_by_regex() {
+bfl_search_text_by_regex() {
   grep -r "$@" *
 }
 
-search_text_by_regex_ignore_case() {
+bfl_search_text_by_regex_ignore_case() {
   grep -i -r "$@" *
 }

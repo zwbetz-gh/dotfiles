@@ -1,4 +1,4 @@
-docker_clean() {
+bfl_docker_clean() {
   echo "Removing unused containers"
   docker container prune -f
   echo "Removing unused images"
@@ -7,14 +7,18 @@ docker_clean() {
   docker volume prune -f
 }
 
-docker_usage() {
+bfl_docker_usage() {
   docker system df
 }
 
-docker_container_stop_all() {
+bfl_docker_container_stop_all() {
   docker container stop $(docker container ls -aq)
 }
 
-docker_container_remove_all() {
+bfl_docker_container_remove_all() {
   docker container rm $(docker container ls -aq)
+}
+
+bfl_docker_config_services() {
+  docker-compose config --services
 }

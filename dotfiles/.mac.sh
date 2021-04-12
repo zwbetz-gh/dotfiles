@@ -12,7 +12,8 @@ source ${HOME}/.mac_various.sh
 ################################################################################
 # Env
 ################################################################################
-export GRADLE_HOME=${HOME}/bin/gradle/gradle-6.2
+export GRADLE_HOME=${HOME}/bin/gradle/gradle-6.8.3
+export GROOVY_HOME=${HOME}/bin/groovy/groovy-3.0.7
 export LD_LIBRARY_PATH=${HOME}/bin/oracle/instantclient_19_3:$LD_LIBRARY_PATH
 export POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/latest
 export DOTNET_HOME=${HOME}/bin/dotnet-sdk-3.1.101-osx-x64
@@ -23,10 +24,11 @@ export FLYWAY_HOME=${HOME}/bin/flyway-6.4.4
 ################################################################################
 # PATH
 ################################################################################
-export PATH=$GRADLE_HOME/bin:${PATH}
-export PATH=$LD_LIBRARY_PATH:${PATH}
-export PATH=$POSTGRES_HOME/bin:${PATH}
-export PATH=$DOTNET_HOME:${PATH}
-export PATH=$DOTNET_TOOLS_HOME:${PATH}
-export PATH=$FLYWAY_HOME:${PATH}
+export PATH=${GRADLE_HOME}/bin:${PATH}
+export PATH=${GROOVY_HOME}/bin:${PATH}
+export PATH=${LD_LIBRARY_PATH}:${PATH}
+export PATH=${POSTGRES_HOME}/bin:${PATH}
+export PATH=${DOTNET_HOME}:${PATH}
+export PATH=${DOTNET_TOOLS_HOME}:${PATH}
+export PATH=${FLYWAY_HOME}:${PATH}
 export PATH="${PATH}:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"

@@ -3,8 +3,16 @@
 ## One-Time Setup
 
 ```
-cd ${HOME}
-git clone git@github.com:zwbetz-gh/dotfiles.git
-cd dotfiles
-./setup.sh
+cd ~;
+git clone git@git.uscis.dhs.gov:zwbetz/dotfiles.git;
+cd dotfiles;
+./setup.sh;
+```
+
+## Bash Function Library
+
+Available functions can be viewed with
+
+```
+compgen -A function | grep 'bfl_';
 ```
