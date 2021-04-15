@@ -11,6 +11,6 @@ bfl_jots_open() {
 
 bfl_jots() {
   echo "" >> ${JOTS}
-  jots_timestamp >> ${JOTS}
-  jots_open
+  bfl_jots_timestamp >> ${JOTS}
+  bfl_jots_open
 }
