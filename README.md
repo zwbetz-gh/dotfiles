@@ -4,7 +4,7 @@
 
 ```
 cd ~;
-git clone git@github.com:zwbetz-gh/dotfiles.git
+git clone git@github.com:zwbetz-gh/dotfiles.git;
 cd dotfiles;
 ./setup.sh;
 ```
