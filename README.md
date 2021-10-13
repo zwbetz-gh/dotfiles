@@ -3,19 +3,21 @@
 ## One-Time Setup
 
 ```
-cd ~;
-git clone git@github.com:zwbetz-gh/dotfiles.git;
-cd dotfiles;
-./setup.sh;
+cd ~ && \
+git clone git@github.com:zwbetz-gh/dotfiles.git && \
+cd dotfiles && \
+./setup.sh
 ```
 
 ## Bash Function Library
 
-Available functions can be viewed with
+Available functions can be viewed with:
 
 ```
-compgen -A function | grep 'bfl_';
+compgen -A function | grep 'bfl_'
 ```
+
+Or, by typing `bfl_` and doing a trusty old `Tab` + `Tab`
 
 ## Disclaimer
 
