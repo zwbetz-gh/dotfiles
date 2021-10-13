@@ -16,3 +16,9 @@ Available functions can be viewed with
 ```
 compgen -A function | grep 'bfl_';
 ```
+
+## Disclaimer
+
+These are my personal dotfiles. I keep them in git as a backup for myself, and a reference for others.
+
+If you attempt to setup these dotfiles on your machine, I take no responsibility for any damage that may happen.

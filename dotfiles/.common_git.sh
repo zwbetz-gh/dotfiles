@@ -6,11 +6,11 @@ bfl_git_clean() {
 }
 
 bfl_git_branch_delete_all_except_current() {
-  echo "Before ..."
+  echo "Before"
   git branch
-  echo "Deleting all branches except current ..."
+  echo "Deleting all branches except current"
   git branch | grep -v '^*' | xargs git branch -D
-  echo "After ..."
+  echo "After"
   git branch
 }
 
@@ -36,4 +36,8 @@ To exit early, hit Control-C
 
   # List remaining branches
   git branch
+}
+
+bfl_git_trigger_build() {
+  git commit --allow-empty -m "trigger build"
 }

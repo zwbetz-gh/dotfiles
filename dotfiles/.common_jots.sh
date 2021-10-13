@@ -1,16 +1,17 @@
-JOTS=${HOME}/jots/jots.txt
-
-bfl_jots_timestamp() {
-  local timestamp="[$(date +'%F %T')]"
-  echo -e "#####################\n${timestamp}"
-}
-
-bfl_jots_open() {
-  code ${JOTS}
-}
+JOTS_DIR="${HOME}/jots"
+JOTS_FILE="${JOTS_DIR}/jots.txt"
 
 bfl_jots() {
-  echo "" >> ${JOTS}
-  bfl_jots_timestamp >> ${JOTS}
-  bfl_jots_open
+  local TODAY="$(date +'%F')"
+  local DATESTAMP="DATESTAMP ${TODAY}"
+  touch ${JOTS_FILE}
+  if ! grep "${DATESTAMP}" ${JOTS_FILE} > /dev/null; then
+    echo "${DATESTAMP} does not exist, stamping"
+    echo "" >> ${JOTS_FILE}
+    echo "" >> ${JOTS_FILE}
+    echo ${DATESTAMP} >> ${JOTS_FILE}
+  else
+    echo "${DATESTAMP} exists, skipping"
+  fi
+  code ${JOTS_FILE}
 }
