@@ -2,8 +2,9 @@
 
 ## One-Time Setup
 
-```
-cd ~ && \
+```sh
+mkdir -p ${HOME}/dev && \
+cd ${HOME}/dev && \
 git clone git@github.com:zwbetz-gh/dotfiles.git && \
 cd dotfiles && \
 ./setup.sh
