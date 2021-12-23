@@ -24,14 +24,3 @@ export PATH=${HUGO_HOME}:${PATH}
 
 # Add `code`
 export PATH="${PATH}:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
-################################################################################
-# Various
-################################################################################
-
-# Force Apple Silicon, which is arm64, to pull and run images with linux/amd64
-export DOCKER_DEFAULT_PLATFORM=linux/amd64
-
-# Do not use buildkit
-export DOCKER_BUILDKIT=0
-export COMPOSE_DOCKER_CLI_BUILD=0
