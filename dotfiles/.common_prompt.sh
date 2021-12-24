@@ -1,6 +1,5 @@
-################################################################################
-# Ref: https://www.gnu.org/software/bash/manual/html_node/Controlling-the-Prompt.html
-################################################################################
+# See https://www.gnu.org/software/bash/manual/html_node/Controlling-the-Prompt.html
+
 bfl_current_git_branch() {
   local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
   if [[ -n ${branch} ]]; then
