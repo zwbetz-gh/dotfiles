@@ -21,6 +21,11 @@ export PATH=${HOME}/bin/scripts:${PATH}
 export PATH=${JAVA_HOME}/bin:${PATH}
 export PATH=${NODE_HOME}/bin:${PATH}
 export PATH=${HOME}/bin/hugo/hugo_extended_0.91.1_macOS-ARM64:${PATH}
-
-# Add `code`
 export PATH="${PATH}:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+################################################################################
+# Various
+################################################################################
+
+# See https://support.apple.com/en-us/HT208050
+export BASH_SILENCE_DEPRECATION_WARNING=1
