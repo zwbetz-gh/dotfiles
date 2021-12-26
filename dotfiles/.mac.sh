@@ -17,7 +17,7 @@ export NODE_HOME=${HOME}/bin/node/node-v16.13.1-darwin-arm64
 # PATH
 ################################################################################
 
-export PATH=${HOME}/bin/scripts:${PATH}
+export PATH=${HOME}/dev/scripts:${PATH}
 export PATH=${JAVA_HOME}/bin:${PATH}
 export PATH=${NODE_HOME}/bin:${PATH}
 export PATH=${HOME}/bin/hugo/hugo_extended_0.91.1_macOS-ARM64:${PATH}
