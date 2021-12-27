@@ -3,19 +3,19 @@ bfl_log_message() {
   shift
   local MESSAGE="${@}"
   local TIMESTAMP=$(date +'%F %T')
-  echo -e "[${TIMESTAMP}] [${LEVEL}]\t${MESSAGE}"
+  echo -e "[${TIMESTAMP}] [${LEVEL}] ${MESSAGE}"
 }
 
 bfl_log_info() {
-  log_message "INFO" "${@}"
+  bfl_log_message "INFO" "${@}"
 }
 
 bfl_log_warning() {
-  log_message "WARNING" "${@}"
+  bfl_log_message "WARNING" "${@}"
 }
 
 bfl_log_error() {
-  log_message "ERROR" "${@}"
+  bfl_log_message "ERROR" "${@}"
 }
 
 # bfl_log_info info
