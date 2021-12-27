@@ -6,7 +6,7 @@ bfl_jots() {
   local DATESTAMP="DATESTAMP ${TODAY}"
   mkdir -p ${JOTS_DIR}
   touch ${JOTS_FILE}
-  if ! grep "${DATESTAMP}" ${JOTS_FILE} > /dev/null; then
+  if ! grep "${DATESTAMP}" ${JOTS_FILE} > /dev/null ; then
     echo "${DATESTAMP} does not exist, stamping"
     echo "" >> ${JOTS_FILE}
     echo "" >> ${JOTS_FILE}

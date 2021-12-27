@@ -2,10 +2,6 @@ bfl_mac_get_local_ip() {
   ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}'
 }
 
-bfl_mac_get_barcode() {
-  hostname | tr -d 'LMHQU';
-}
-
 bfl_mac_get_serial_number() {
   system_profiler SPHardwareDataType | awk '/Serial/ {print $4}';
 }
@@ -37,7 +33,7 @@ bfl_mac_show_mac_os_update_history() {
 }
 
 bfl_mac_caffe() {
-  if [[ ${#} -lt 1 ]]; then
+  if [[ ${#} -lt 1 ]] ; then
     echo -e "Usage:\n  ${FUNCNAME[0]} HOURS"
     echo -e "Sample:\n  ${FUNCNAME[0]} 1"
     return 1

@@ -25,14 +25,14 @@ To exit early, hit Control-C
   branches="$(git branch | tr -d ' ' | grep -v '^*')"
 
   # Loop through branches, asking if you wanna delete
-  for b in $branches; do 
+  for b in $branches ; do
     read -p "Delete $b? " answer
-    case $answer in 
+    case $answer in
       y|yes) git branch -D $b ;;
       *) echo "Keeping $b." ;;
     esac
     echo ""
-  done 
+  done
 
   # List remaining branches
   git branch

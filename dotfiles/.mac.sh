@@ -32,6 +32,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export BASH_GIT_COMPLETION_FILEPATH=/Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 
-if [[ -f ${BASH_GIT_COMPLETION_FILEPATH} ]]; then
+if [[ -f ${BASH_GIT_COMPLETION_FILEPATH} ]] ; then
   source ${BASH_GIT_COMPLETION_FILEPATH}
 fi

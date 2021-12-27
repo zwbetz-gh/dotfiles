@@ -7,7 +7,7 @@ mkdir -p ${dotfiles_old}
 # Get git dotfiles
 dotfiles="$(find $(pwd)/dotfiles -type f -name ".*")"
 
-for f in ${dotfiles}; do
+for f in ${dotfiles} ; do
   dotfile=${HOME}/$(basename ${f})
 
   # Backup old dotfile

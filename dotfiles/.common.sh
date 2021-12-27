@@ -30,10 +30,10 @@ alias grep="grep --color=auto"
 # Ref: https://stackoverflow.com/a/8597411/11499871
 ################################################################################
 
-if [[ "${OSTYPE}" == "linux-gnu" ]]; then
+if [[ "${OSTYPE}" == "linux-gnu" ]] ; then
   echo "OS is linux"
   source ${HOME}/.linux.sh
-elif [[ "${OSTYPE}" == "darwin"* ]]; then
+elif [[ "${OSTYPE}" == "darwin"* ]] ; then
   echo "OS is mac"
   source ${HOME}/.mac.sh
 else
