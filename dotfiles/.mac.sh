@@ -11,6 +11,7 @@ source ${HOME}/.mac_various.sh
 ################################################################################
 
 export JAVA_HOME=${HOME}/bin/java/jdk-11.0.13+8/Contents/Home
+export GROOVY_HOME=${HOME}/bin/groovy/groovy-3.0.9
 export NODE_HOME=${HOME}/bin/node/node-v16.13.1-darwin-arm64
 
 ################################################################################
@@ -19,9 +20,10 @@ export NODE_HOME=${HOME}/bin/node/node-v16.13.1-darwin-arm64
 
 export PATH=${HOME}/dev/scripts:${PATH}
 export PATH=${JAVA_HOME}/bin:${PATH}
+export PATH=${GROOVY_HOME}/bin:${PATH}
 export PATH=${NODE_HOME}/bin:${PATH}
 export PATH=${HOME}/bin/hugo/hugo_extended_0.91.1_macOS-ARM64:${PATH}
-export PATH="${PATH}:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:${PATH}"
 
 ################################################################################
 # Various
