@@ -26,6 +26,17 @@ export PATH=${HOME}/bin/hugo/hugo_extended_0.91.1_macOS-ARM64:${PATH}
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:${PATH}"
 
 ################################################################################
+# Custom Env
+################################################################################
+custom_env=${HOME}/custom/.env
+
+if [[ -f ${custom_env} ]] ; then
+  set -o allexport
+  source ${custom_env}
+  set +o allexport
+fi
+
+################################################################################
 # Various
 ################################################################################
 
