@@ -21,8 +21,8 @@ bfl_docker_container_remove_all() {
   docker container rm $(docker container ls -aq)
 }
 
-bfl_docker_config_services() {
-  docker-compose config --services
+bfl_docker_compose_build_sequential() {
+  docker compose config --services | xargs -I {} docker compose build {}
 }
 
 bfl_docker_memory_usage() {
