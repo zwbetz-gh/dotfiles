@@ -24,6 +24,14 @@ export PATH=${GROOVY_HOME}/bin:${PATH}
 export PATH=${NODE_HOME}/bin:${PATH}
 export PATH=${HOME}/bin/hugo/hugo_0.96.0_macOS-ARM64:${PATH}
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:${PATH}"
+export PATH="${HOME}/Library/Python/3.8/bin:${PATH}"
+
+################################################################################
+# Alias
+################################################################################
+
+alias python="python3"
+alias pip="pip3"
 
 ################################################################################
 # Custom Env
